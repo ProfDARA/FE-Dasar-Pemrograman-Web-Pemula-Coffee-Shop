@@ -1,0 +1,426 @@
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+
+}
+/* Background */
+body {
+    background-image: url('asset/bgkopi.png');
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    max-width: 1080px;
+    margin: 0 auto; /* untuk membuat konten terpusat di tengah */
+    
+}
+
+/* header */
+header {
+    padding: 20px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    background-color: #754200e5;
+    color: rgba(255, 255, 255, 0.856);
+}
+
+header h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* Navigasi */
+.nav {
+    overflow: hidden;
+    background-color: #3b2200f1;
+    width: 100%;
+
+}
+
+.nav a {
+    float: left;
+    position: sticky;
+    top: 0;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #ffe2ba;
+    color: #3b2200f1;
+}
+
+
+/*pengumuman*/
+.berita {
+    display: flex;
+    padding: 40px 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-shadow: 0 0 15px 1px;
+    background-color: #e6e6e6e1;
+    text-align: center;
+}
+
+/*main body*/
+main {
+    max-width: 98%;
+    display: inline-block;
+    padding: 30px 10px;
+    box-shadow: 0 0 15px 1px rgba(185, 124, 44, 0.863);
+    background-color: #f5e4d2;
+    text-align: left;
+
+}
+
+#motto{
+    text-align: center;
+
+}
+
+/*flexbox kopi*/
+.content {
+    width: 75%;
+    padding: 10px;
+    float: left;
+}
+
+content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subject {
+    flex-basis: 20%;
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+/* gambar*/
+.box {
+    width: 100%;
+    overflow: hidden;
+}
+
+#image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#image:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*footer*/
+
+footer {
+    padding: 20px;
+    background: #cf0909;
+    left: 0;
+    bottom: 90%;
+    width: 96%;
+    background-color: rgba(88, 53, 0, 0.603);
+    color: white;
+    text-align: center;
+}
+
+
+.tentang {
+    margin-left: 10px;
+}
+
+
+
+
+/*produk kopi */
+
+#products {
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.products-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.product {
+    flex: 0 0 auto;
+    width: 200px; /* Atur lebar kotak produk */
+    margin: 0 10px 20px;
+    text-align: center;
+    margin-right: 20px;
+    scroll-snap-align: start;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    scroll-snap-align: start;
+    cursor: pointer; /* Tambahkan kursor pointer untuk menandakan bisa diklik */
+}
+
+
+/*identitas samping*/
+aside {
+    width: 15%;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: right;
+    background-color: #eee;
+    border: #777 solid 1px;
+    text-align: center;
+}
+
+aside img {
+    height: 50%;
+    width: 90%;
+    margin: 5px;
+}
+
+
+
+
+/*favorit*/
+
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 auto;
+    display: none; 
+}
+
+.slide.active {
+    display: block; 
+}
+
+.slide img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.teks {
+    position: flex; /* Letakkan teks di atas gambar */
+    bottom: 0; /* Tempatkan teks di bagian bawah slide */
+    left: 0; /* Tempatkan teks di bagian kiri slide */
+    width: 100%; /* Lebar teks sama dengan lebar slide */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang semi-transparan */
+    color: white; /* Warna teks putih agar kontras */
+    padding: 10px; /* Beri padding pada teks */
+    box-sizing: border-box; /* Ukuran kotak termasuk padding dan border */
+}
+
+.teks p,
+.teks small {
+    margin: 0; /* Hilangkan margin bawaan */
+}
+
+
+/*slideshow*/
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+    flex: 0 0 auto;
+    margin-right: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.slide.active {
+    display: block;
+}
+
+/*kolom laporan*/
+.form-box {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background-color: bisque;
+}
+
+.input-group input {
+    width: 37%;
+    border: 0;
+    margin: 2%;
+    padding: 10px;
+    display: inline-block;
+    background: #fff;
+    outline: none !important;
+}
+
+.text-area textarea {
+    width: 80%;
+    height: 94%;
+    border: 0;
+    margin: 2%;
+    padding: 10px;
+    background: #fff;
+    outline: none !important;
+    resize: none;
+}
+
+.kirim-btn {
+    border: 0;
+    margin: 2%;
+    padding: 10px;
+    background: #2ab0ff;
+    outline: none !important;
+    display: block;
+}
+
+.kontak span {
+    margin: 5%;
+}
+
+.kontak img {
+    width: 20px;
+    margin: -5px 10px;
+}
+
+.kontak {
+    margin: 5% 0 5% 25%;
+    width: 65%;
+}
+.kontenutama {
+    width: 70%; /* Lebar konten utama */
+    float: left; /* Kiri */
+}
+.konten {
+    padding-top: 5px;
+    margin: 2px 0px 2px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .slideshow-container {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .slide{
+        margin-right: 0; 
+        margin-bottom: 20px; 
+        max-width: 300px; 
+        margin: 0 auto; 
+    }
+
+    main {
+        display:flex;
+        flex-direction: column;
+    }
+
+    aside{
+        width: 90%;
+        float: none;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    header{
+        padding: 20px;
+        height: auto;
+        text-align: left;
+    }
+
+    .nav {
+        float: none;
+        text-align: center;
+    }
+
+    .nav a {
+        float: none;
+        padding: 10px,0;
+        width: 100%;
+        position: static;
+    }
+
+    .berita{
+        display: block;
+        padding: 20px;
+        width: 80%;
+    }
+
+    .profile-info {
+        width: 100%;
+        overflow: inherit;
+    }
+
+    content {
+        float: center;
+    }
+    .konten {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px; /* Tambahkan padding untuk memberikan ruang di sekitar elemen */
+    }
+
+
+    .box {
+        float: center;
+    }
+
+
+    .proyek img {
+        width: 45%;
+    }
+
+    .identitas {
+        height: 40%;
+        margin: 10px 0;
+    }
+
+    span {
+        display: block;
+    }
+}
